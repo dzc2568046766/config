@@ -1,31 +1,16 @@
-eureka:
-    client:
-        service-url:
-            defaultZone: http://server1:9900/eureka/,http://server2:9901/eureka/
 mybatis:
-    configuration:
-        call-setters-on-nulls: true
-        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-    mapper-locations: classpath:com/duzhicheng/cloud/com/duzhicheng/cloud/dao/user/mapper/*.xml
-    type-aliases-package: springcloudentity.springcloudentity.entity
-server:
-    port: 9600
+  configuration:
+    call-setters-on-nulls: 'true'
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:com/duzhicheng/cloud/com/duzhicheng/cloud/dao/user/mapper/*.xml
+  type-aliases-package: springcloudentity.springcloudentity.entity
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server1:9900/eureka/,http://server2:9901/eureka/
 spring:
-    application:
-        name: particle-user
-    datasource:
-        driver-class-name: com.mysql.jdbc.Driver
-        password: lh123
-        url: jdbc:mysql://192.168.1.8:3306/lh?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
-        username: lh
-    redis:
-        database: 1
-        host: 192.168.1.14
-        jedis:
-            pool:
-                max-active: 8
-                max-idle: 8
-                max-wait: -1
-                min-idle: 0
-        port: 6379
-        timeout: 30000
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: lh123
+    url: jdbc:mysql://192.168.1.8:3306/lh?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    username: lh
