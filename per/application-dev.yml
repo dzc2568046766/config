@@ -1,3 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: lh123
+    url: jdbc:mysql://192.168.1.8:3306/lh?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    username: lh
 mybatis:
   configuration:
     call-setters-on-nulls: 'true'
@@ -8,9 +14,4 @@ eureka:
   client:
     service-url:
       defaultZone: http://server1:9900/eureka/,http://server2:9901/eureka/
-spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    password: lh123
-    url: jdbc:mysql://192.168.1.8:3306/lh?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
-    username: lh
+
